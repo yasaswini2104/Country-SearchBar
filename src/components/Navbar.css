@@ -1,0 +1,79 @@
+/* src/Navbar.css */
+.navbar {
+    background-color: #282c34; /* Background color of the navbar */
+    color: white;
+    padding: 10px 20px; /* Padding around the content */
+    position: fixed; /* Fixes the navbar to the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures the navbar is above other content */
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  }
+  
+  .navbar-content {
+    display: flex;
+    align-items: center; /* Center-aligns items vertically */
+    width: 100%; /* Full width */
+  }
+  
+  .navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-info {
+    flex: 1; /* Takes up remaining space */
+    margin-left: 20px; /* Adds space between title and marquee */
+    overflow: hidden; /* Hides overflow text */
+  }
+  
+  .marquee-wrapper {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevents text wrapping */
+  }
+  
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%; /* Starts the text outside the view */
+    animation: marquee 1s linear infinite; /* Animation */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%); /* Start position */
+    }
+    100% {
+      transform: translateX(-100%); /* End position */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-content {
+      flex-direction: column; /* Stacks items vertically on smaller screens */
+      text-align: center; /* Center-aligns text on small screens */
+    }
+  
+    .marquee-text {
+      font-size: 0.875rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  /* src/Navbar.css */
+.scrolling-text {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scrolling-text 50s linear infinite;
+  }
+  
+  @keyframes scrolling-text {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
